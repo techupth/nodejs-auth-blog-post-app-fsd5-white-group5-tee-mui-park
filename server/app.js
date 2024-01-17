@@ -4,8 +4,11 @@ import cors from "cors";
 import postRouter from "./apps/posts.js";
 import { client } from "./utils/db.js";
 import authRouter from "./apps/auth.js";
+import dotenv from "dotenv";
 
 async function init() {
+  dotenv.config();
+
   const app = express();
   const port = 4000;
 
